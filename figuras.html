@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras geometricas - Curso practivo de JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./figuras.css">
+    <script src="./figuras.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">Figuras geometricas</h1>
+        <ul id="header__list">
+            <li>Cuadrado</li>
+            <li>Triangulo</li>
+            <li>Circulo</li>
+        </ul>
+    </header>
+    
+    <main class="main-figures">
+        <section class="section__cuadrado">
+            <div class="col1">
+                <h2>Calcula el Area y el perimetro de un cuadrado</h2>
+
+                <form action="">
+                    <div class="mb-3 pt-3">
+                        <label for="ladoCuadrado" class="form-label">Escribe cuanto mide cada lado de tu cuadrado:</label>
+                        <input type="number" class="form-control" id="ladoCuadrado" />
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto pt-2"></div>
+                        <button type="button" class="btn btn-light btn-outline-danger" onclick="calcularPerimetroCuadrado();">Calcular el perimetro</button>
+                        <button type="button" class="btn btn-light btn-outline-danger" onclick="calcularAreaCuadrado();">Calcular el Area</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col2">
+                <div class="baseImage">
+                    <img src="./contorno-de-forma-cuadrada.png" alt="Cuadrado" width="200" height="200">
+                </div>
+                <div class="baseCalculo">
+                    <div class="row">
+                        <div class="col">
+                            <em>Area:</em>
+                            <a>0 cm</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <em>Perimetro:</em>
+                            <label id="resultadoCuadrado">0 cm^2</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        <section class="section__triangulo">
+            <div class="col1">
+                <h2>Calcula el Area y el perimetro de un triangulo</h2>
+                <form class="pt-3">
+                    <div class="row pt-2">
+                        <div class="col">
+                            <label for="ladoCuadrado" class="form-label">Escribe cuanto mide el lado 1 de tu triangulo:</label>
+                            <input type="number" class="form-control" id="lado1_triangulo" />
+                        </div>
+                        <div class="col">
+                            <label for="ladoCuadrado" class="form-label">Escribe cuanto mide el lado 2 de tu triangulo:</label>
+                            <input type="number" class="form-control" id="lado2_triangulo" />
+                        </div>
+                    </div>
+                    <div class="row pt-2 pb-2">
+                        <div class="col">
+                            <label for="ladoCuadrado" class="form-label">Escribe cuanto el lado base de tu triangulo:</label>
+                            <input type="number" class="form-control" id="ladoBase_triangulo" />
+                        </div>
+                        <div class="col">
+                            <label for="ladoCuadrado" class="form-label">Escribe cuanto es la altura de tu triangulo:</label>
+                        <input type="number" class="form-control" id="altura_triangulo" />
+                        </div>
+                    </div>
+                    <div class="pt-3">
+                        <button type="button" class="btn btn-light btn-outline-primary" onclick="calcularPerimetroTriangulo();">Calcular el perimetro</button>
+                        <button type="button" class="btn btn-light btn-outline-primary" onclick="calcularAreaTriangulo();">Calcular el Area</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col2">
+                <div class="baseImage">
+                    <img src="./triangle-outline-variant.png" alt="Triangulo" width="250" height="250">
+                </div>
+                <div class="baseCalculo">
+                    <p>Area:</p>
+                    <p>Perimetro:</p>
+                </div>
+            </div>
+            
+        </section>
+    
+        <section class="section__circulo">
+            <div class="col1">
+                <h2>Calcula el Area y el perimetro de un circulo</h2>
+    
+                <form class="pt-2" action="">
+                    <div class="mb-3 pt-3">
+                        <label for="ladoCuadrado" class="form-label">Escribe cuanto es el radio de tu circulo:</label>
+                        <input type="number"  class="form-control" id="radioCirculo" />
+                    </div>
+                    <div class="pt-3">
+                        <button type="button" class="btn btn-light btn-outline-warning" onclick="calcularPerimetroCirculo();">Calcular el perimetro</button>
+                        <button type="button" class="btn btn-light btn-outline-warning" onclick="calcularAreaCirculo();">Calcular el Area</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col2">
+                <div class="baseImage">
+                    <img src="./dry-clean.png" alt="Circle" width="250" height="250">
+                </div>
+                <div class="baseCalculo">
+                    <p>Area:</p>
+                    <p>Perimetro:</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>

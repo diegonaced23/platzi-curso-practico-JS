@@ -1,0 +1,106 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+}
+
+.header {
+    width: 100%;
+    /* background-color: #2c2f33; */
+    background-image: url("https://fondosmil.com/fondo/22293.jpg");
+    border-bottom: 10px solid #99c93f;
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #ffff;
+}
+
+.header .header__title {
+    font-family: 'Zen Tokyo Zoo', cursive;
+    font-size: 4.5rem;
+    letter-spacing: 0.2rem;
+}
+
+#header__list li {
+    display: inline;
+}
+
+.main-figures {
+    background-color: #d0d0d0;
+    padding: 5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-figures section {
+    margin: 0 20rem;
+    background-color: #ffffff;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #2c2f33;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    width: 100%;
+    height: auto;
+}
+
+h2{
+    color: white;
+}
+
+.mb-3 > label {
+    color: white;
+}
+
+
+.section__cuadrado {
+    display: flex;
+    background-image: url("https://fondosmil.com/fondo/22293.jpg");
+}
+
+.section__triangulo {
+    display: flex;
+    background-image: url("https://fondosmil.com/fondo/22293.jpg");
+}
+
+.section__circulo {
+    display: flex;
+    background-image: url("https://fondosmil.com/fondo/22293.jpg");
+}
+
+.col > label {
+    color: white;
+}
+  
+.cols div {
+    flex: 1;
+}
+
+.col1 {
+    padding: 3rem;
+    width: 50%;
+}
+  
+.col2 {
+    padding: 3rem;
+    width: 50%;
+}
+
+.baseImage {
+    padding: 2rem;
+}
+
+.baseCalculo {
+    border: 2px solid #2c2f33;
+    border-radius: 8px;
+    background-color: gray;
+}
+
+.btn {
+    font-size: 1.4rem;
+}
