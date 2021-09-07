@@ -13,9 +13,21 @@
     <header class="header">
         <h1 class="header__title">Figuras geometricas</h1>
         <ul id="header__list">
-            <li>Cuadrado</li>
-            <li>Triangulo</li>
-            <li>Circulo</li>
+            <li id="sectionCuadrado" onclick="container(this);">
+                <div class="btn btn-success">
+                    <img src="./contorno-de-forma-cuadrada.png" alt="" width="15" height="15">
+                </div>
+            </li>
+            <li id="sectionTriangulo" onclick="container(this);">
+                <div class="btn btn-warning">
+                    <img src="./triangle-outline-variant.png" alt="" width="15" height="15">
+                </div>
+            </li>
+            <li id="sectionCirculo" onclick="container(this);">
+                <div class="btn btn-danger">
+                    <img src="./dry-clean.png" alt="" width="15" height="15">
+                </div>
+            </li>
         </ul>
     </header>
     
@@ -42,14 +54,14 @@
                 <div class="baseCalculo">
                     <div class="row">
                         <div class="col">
-                            <em>Area:</em>
-                            <a>0 cm</a>
+                            <em>Perimetro:</em>
+                            <a id="resultadoCuadradoPerimetro">0 cm</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <em>Perimetro:</em>
-                            <label id="resultadoCuadrado">0 cm^2</label>
+                            <em>Area:</em>
+                            <a id="resultadoCuadradoArea">0 cm²</a>
                         </div>
                     </div>
                 </div>
@@ -84,6 +96,7 @@
                     <div class="pt-3">
                         <button type="button" class="btn btn-light btn-outline-primary" onclick="calcularPerimetroTriangulo();">Calcular el perimetro</button>
                         <button type="button" class="btn btn-light btn-outline-primary" onclick="calcularAreaTriangulo();">Calcular el Area</button>
+                        <button type="button" class="btn btn-light btn-outline-primary" onclick="calcularAlturaTriangulo();">Calcular la altura de un triangulo isoceles</button>
                     </div>
                 </form>
             </div>
@@ -93,8 +106,24 @@
                     <img src="./triangle-outline-variant.png" alt="Triangulo" width="250" height="250">
                 </div>
                 <div class="baseCalculo">
-                    <p>Area:</p>
-                    <p>Perimetro:</p>
+                    <div class="row">
+                        <div class="col">
+                            <em>Perimetro:</em>
+                            <a id="resultadoTrianguloPerimetro">0 cm</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <em>Area:</em>
+                            <a id="resultadoTrianguloArea">0 cm²</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <em>Altura:</em>
+                            <a id="resultadoTrianguloAltura"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -121,8 +150,18 @@
                     <img src="./dry-clean.png" alt="Circle" width="250" height="250">
                 </div>
                 <div class="baseCalculo">
-                    <p>Area:</p>
-                    <p>Perimetro:</p>
+                    <div class="row">
+                        <div class="col">
+                            <em>Perimetro:</em>
+                            <a id="resultadoCirculoPerimetro">0 cm</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <em>Area:</em>
+                            <a id="resultadoCirculoArea">0 cm²</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

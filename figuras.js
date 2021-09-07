@@ -53,17 +53,18 @@ function calcularPerimetroCuadrado() {
     const input = document.getElementById("ladoCuadrado");
     const value = input.value;
 
-    const perimetro = perimetroCuadrado(value);
-    alert(perimetro);
-    document.getElementById('resultadoCuadrado').innerHTML = perimetro;
+    const perimetro = perimetroCuadrado(value) + " cm";
+    document.getElementById('resultadoCuadradoPerimetro').innerHTML = perimetro;
+    document.getElementById('resultadoCuadradoPerimetro').style.color = 'red';
 }
 
 function calcularAreaCuadrado() {
     const input = document.getElementById("ladoCuadrado");
     const value = input.value;
 
-    const area = areaCuadrado(value);
-    alert(area);
+    const area = areaCuadrado(value) + "cm²";
+    document.getElementById('resultadoCuadradoArea').innerHTML = area;
+    document.getElementById('resultadoCuadradoArea').style.color = 'red';
 }
 
 //funciones del triangulo
@@ -76,7 +77,8 @@ function calcularPerimetroTriangulo() {
     const value_ladoBase = Number(ladoBase.value);
 
     const perimetro = perimetroTriangulo(value_lado1, value_lado2, value_ladoBase);
-    alert(perimetro);
+    document.getElementById('resultadoTrianguloPerimetro').innerHTML = perimetro + " cm";
+    document.getElementById('resultadoTrianguloPerimetro').style.color = 'blue';
 }
 
 function calcularAreaTriangulo() {
@@ -85,8 +87,33 @@ function calcularAreaTriangulo() {
     const altura = document.getElementById("altura_triangulo");
     const value_altura = altura.value;
 
-    const area = areaTriangulo(value_altura, value_lado);
-    alert("El area del triangulo es: " + area);
+
+    if (value_altura == "") {
+        document.getElementById('resultadoTrianguloArea').innerHTML = "No se encontro la altura para el calculo";
+        document.getElementById('resultadoTrianguloArea').style.color = 'blue';
+    }else{
+        const area = areaTriangulo(value_altura, value_lado);
+        document.getElementById('resultadoTrianguloArea').innerHTML = area + " cm²";
+        document.getElementById('resultadoTrianguloArea').style.color = 'blue';
+    }
+}
+
+function calcularAlturaTriangulo() {
+    const lado1 = document.getElementById("lado1_triangulo");
+    const value_lado1 = Number(lado1.value);
+    const lado2 = document.getElementById("lado2_triangulo");
+    const value_lado2 = Number(lado2.value);
+    const ladoBase = document.getElementById("ladoBase_triangulo");
+    const value_ladoBase = Number(ladoBase.value);
+
+    if (value_lado1 == value_lado2 && value_lado1 != value_ladoBase) {
+        const altura = (Math.sqrt(value_lado1**2-(value_ladoBase/2)**2)).toFixed(2);
+        document.getElementById('resultadoTrianguloAltura').innerHTML = altura + " cm";
+        document.getElementById('resultadoTrianguloAltura').style.color = 'blue';
+    }else {
+        document.getElementById('resultadoTrianguloAltura').innerHTML = "No es un triangulo isosceles";
+        document.getElementById('resultadoTrianguloAltura').style.color = 'blue';
+    }
 }
 
 
@@ -96,7 +123,8 @@ function calcularPerimetroCirculo() {
     const value_radio = radio.value;
 
     const perimetro = perimetroCirculo(value_radio);
-    alert("El perimetro del circulo es: " + perimetro); 
+    document.getElementById('resultadoCirculoPerimetro').innerHTML = perimetro + " cm";
+    document.getElementById('resultadoCirculoPerimetro').style.color = 'yellow';
 }
 
 function calcularAreaCirculo() {
@@ -104,5 +132,16 @@ function calcularAreaCirculo() {
     const value_radio = radio.value;
 
     const area = areaCirculo(value_radio);
-    alert("El area del circulo es: " + area);
+    document.getElementById('resultadoCirculoArea').innerHTML = area + " cm²";
+    document.getElementById('resultadoCirculoArea').style.color = 'yellow';
 }
+
+function container(elemento) {
+    var id = elemento.id;
+    alert(id);
+    if (id == "sectionCuadrado") {
+        document.getElementById("section__cuadrado").style.display = 'block';
+        document.getElementById("section__triangulo").style.visibility = "hidden";
+        document.getElementById("section__circulo").style.visibility = "hidden";
+    }
+};

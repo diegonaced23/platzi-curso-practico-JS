@@ -17,6 +17,11 @@ body {
     color: #ffff;
 }
 
+.navbar {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
 .header .header__title {
     font-family: 'Zen Tokyo Zoo', cursive;
     font-size: 4.5rem;
@@ -99,8 +104,18 @@ h2{
     border: 2px solid #2c2f33;
     border-radius: 8px;
     background-color: gray;
+    font-size: 15px;
 }
 
 .btn {
     font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    font-size: 1.4rem;
+}
+
+.col > a {
+    font-weight: bold;
 }
